@@ -45,9 +45,9 @@
 - 周期性更新OLED屏幕上的数据，确保信息的实时性。  
 - 使用RT-Thread的定时器或线程轮询机制来更新显示内容。
 
-  **正常状态：**
+- **正常状态：**
   [![pkjxQHA.md.jpg](https://s21.ax1x.com/2024/08/04/pkjxQHA.md.jpg)](https://imgse.com/i/pkjxQHA)
-  **倾倒状态：**
+- **倾倒状态：**
   [![pkjxKnH.md.jpg](https://s21.ax1x.com/2024/08/04/pkjxKnH.md.jpg)](https://imgse.com/i/pkjxKnH)  
   
 ## 关键技术点  
@@ -79,13 +79,13 @@
    - 将转换来的横滚角和俯仰角通过消息队列传递到mqtt.c文件
    将转换来的横滚角和俯仰角与板载LED矩阵结合，当陀螺仪放平时，LED矩阵全显白色；当陀螺仪倾倒时，LED矩阵全显红色
    - 将转换来的横滚角和俯仰角进一步分解，分析倾斜方向（前倾、后倾、左倾、右倾）、倾斜角度（0-90度），并将分析结果实时显示在OLED屏幕上
-  **正常模式**
+ - **正常模式**
   [![pkjxJ9f.md.jpg](https://s21.ax1x.com/2024/08/04/pkjxJ9f.md.jpg)](https://imgse.com/i/pkjxJ9f)
-  **倾倒模式**
+ - **倾倒模式**
   [![pkjxY38.md.jpg](https://s21.ax1x.com/2024/08/04/pkjxY38.md.jpg)](https://imgse.com/i/pkjxY38)
 4. **MQTT部分**：
    - 将AHT10.c和icm_example.c文件传递来的数据通过 RW007 WIFI模块传递到阿里云，实现远程监控
-  **监控显示**
+ - **监控显示**
 [![pkjxBEn.md.png](https://s21.ax1x.com/2024/08/04/pkjxBEn.md.png)](https://imgse.com/i/pkjxBEn)
 
 
